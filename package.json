@@ -1,7 +1,7 @@
 {
   "name": "hubot-kerbal-stuff",
   "description": "Ask hubot for Kerbal Space Program mods",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "hashashin <gentoo.power@gmail.com>",
   "license": "MIT",
   "keywords": [

@@ -2,8 +2,8 @@
 #   Ask hubot for Kerbal Space Program mods
 #
 # Configuration:
-#   KS_API_URL Kerbalstuff api url, defaults to https://kerbalstuff.com/api (just in case someday is changed)
-#   KS_MAX_RESULTS Max results to respond in chat, defaults to 5
+#   HUBOT_KS_API_URL Kerbalstuff api url, defaults to https://kerbalstuff.com/api (just in case someday is changed)
+#   HUBOT_KS_MAX_RESULTS Max results to respond in chat, defaults to 5
 #
 # Commands:
 #   hubot ks find <query> - Search in Kerbalstuff the given word
@@ -14,8 +14,8 @@
 # Author:
 #   hashashin <gentoo.power@gmail.com>
 
-api_url = process.env.KS_API_URL || "https://kerbalstuff.com/api"
-maxresults = process.env.KS_MAX_RESULTS || 5
+api_url = process.env.HUBOT_KS_API_URL || "https://kerbalstuff.com/api"
+maxresults = process.env.HUBOT_KS_MAX_RESULTS || 5
 
 module.exports = (robot) ->
   robot.respond /ks find(?:\s+(.*))?$/i, (msg) ->
