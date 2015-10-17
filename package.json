@@ -9,11 +9,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-kerbal-stuff.git"
+    "url": "git://github.com/hashashin/hubot-kerbal-stuff.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-kerbal-stuff/issues"
+    "url": "https://github.com/hashashin/hubot-kerbal-stuff/issues"
   },
 
   "dependencies": {
