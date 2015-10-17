@@ -17,10 +17,3 @@ Then add **hubot-kerbal-stuff** to your `external-scripts.json`:
   "hubot-kerbal-stuff"
 ]
 ```
-
-## Sample Interaction
-
-```
-user1>> hubot hello
-hubot>> hello!
-```
