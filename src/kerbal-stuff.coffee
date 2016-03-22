@@ -2,7 +2,7 @@
 #   Ask hubot for Kerbal Space Program mods
 #
 # Configuration:
-#   HUBOT_KS_API_URL Kerbalstuff api url, defaults to https://kerbalstuff.com/api (just in case someday is changed)
+#   HUBOT_KS_API_URL Kerbalstuff api url, defaults to https://spacedock.info/api (just in case someday is changed)
 #   HUBOT_KS_MAX_RESULTS Max results to respond in chat, defaults to 5
 #
 # Commands:
@@ -14,7 +14,7 @@
 # Author:
 #   hashashin <gentoo.power@gmail.com>
 
-api_url = process.env.HUBOT_KS_API_URL || "https://kerbalstuff.com/api"
+api_url = process.env.HUBOT_KS_API_URL || "https://spacedock.info/api"
 maxresults = process.env.HUBOT_KS_MAX_RESULTS || 5
 
 module.exports = (robot) ->
@@ -26,10 +26,10 @@ module.exports = (robot) ->
           json = JSON.parse(body)
           if json.length >= maxresults
             for mod in [maxresults..0]
-              msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://kerbalstuff.com/mod/#{json[mod].id}"
+              msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
           else 
             for mod in json
-              msg.send "#{mod.name} by #{mod.author} ksp:#{mod.versions[0].ksp_version} -- url: https://kerbalstuff.com/mod/#{mod.id}"
+              msg.send "#{mod.name} by #{mod.author} ksp:#{mod.versions[0].ksp_version} -- url: https://spacedock.info/mod/#{mod.id}"
         catch err
           msg.send err
 
@@ -39,7 +39,7 @@ module.exports = (robot) ->
         try
           json = JSON.parse(body)
           for mod in [maxresults..0]
-            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://kerbalstuff.com/mod/#{json[mod].id}"
+            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
         catch err
           msg.send err
 
@@ -49,7 +49,7 @@ module.exports = (robot) ->
         try
           json = JSON.parse(body)
           for mod in [maxresults..0]
-            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://kerbalstuff.com/mod/#{json[mod].id}"
+            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
         catch err
           msg.send err
 
@@ -59,6 +59,6 @@ module.exports = (robot) ->
         try
           json = JSON.parse(body)
           for mod in [maxresults..0]
-            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://kerbalstuff.com/mod/#{json[mod].id}"
+            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
         catch err
           msg.send err
