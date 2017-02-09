@@ -21,10 +21,11 @@
     "hubot": "2.x"
   },
   "devDependencies": {
-    "hubot": "2.x",
+    "grunt": "*",
     "mocha": "*",
-    "coffee-script": "^1.12.3",
+    "chai": "*",
     "sinon-chai": "*",
+    "sinon": "*",
     "grunt-mocha-test": "~0.13.2",
     "grunt-release": "~0.14.0",
     "matchdep": "~1.0.1",
