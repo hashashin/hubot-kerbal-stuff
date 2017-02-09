@@ -1,8 +1,17 @@
 language: node_js
 node_js:
-  - "0.11"
-  - "0.10"
+- 6.9.5
 notifications:
   email: false
+  webhooks: https://ambrosio-tele.herokuapp.com/sacarinobot/travisci/133188453
+  on_success: always
+  on_failure: always
+  on_start: always
 before_script:
-  - npm install -g grunt-cli
+- npm install -g grunt-cli
+deploy:
+  api_key:
+    secure: ev592mBcNL/7FvuczN3DzvFIjnlAQwdqhXPM3oxC/2Yyw55PniFU5BYKqMckCWruZgxj3v08me0Fypm/V5DxAvnSeFPX122xwoeDwzS0y67fyyxgPdyF2jHVd4Y5DyTw2aSLgKYVN+mdB1RVtoUOiOD4VYaXQfMN+Qy/D4VM9rRTJnq8P5MOWn/FR4Cmmo5ex0EDT2UmP9ejjeCksWgIT+ZMxKbiwNlnHQMiDzXcVuD8Yc54HjqIoqMGlK/GSP1ZFE+9zGc5V7/KAWG2Ust0OVkAreqpLvo+9NsixQdyknvVSda+XJlez0bkmk8kCZ0gSnj3BvF0pK/tvdQ0erpDirn9ceVYxzqc18NQrPAU6itVsiZMAUa55KfBGl+YIsP4EvbymNlSdZgG+EDieBJhaLJ1nbOQNWICHRca7uSGgTRbpoPKfX1c5QUluo2rmhXD4hiu9/eJ36Bjj4ZQN4Y1brI6wzmvJkf+HXsffnEJKHjR5b5g+blV7jG0N6MhQ7VyNeg78T4lnan1Q89xP50ehvrHeHDn80JRH/gsOgyyVy00ONg1t6A8///msTxu5lTQeUOdBPilDUikENM5d0dBkxp2VX7BbBTRgtndR0Q8m5javrVGq0iM/1BGpOS7MF/T6dhbSEbUhAnDLjkuUi642wfPuaNydmipEusZYLtO6yU=
+  email: 
+    secure: KCMd/GW+2kMGanYqOwqxpxhSsgjJKtxOpfMr9LKzYHIHMV7YrCi0ODIUr2Xqrv8N444kQCV9zqPszgfBC5mDeRt/tiwMQorXWqpdAd1SgVSBgPQTsjfi/aO5n29Ytu3v64VV4SrDVLSHDbwEUFB6GhVB3fuFqiOMM7AiHvhElVgn5E40y5PGsKAY6qAu7NRHYAsUDzsATzJ3fT11uSOAJZYf20kZQDMpHoeOB8eHeYgduzlyCnSkl3htUDipoDBhdANQMRufQLDMqVd8rPCixIF7n9rpIbqHr6mIHUTM4sLHhtk7rn5f0r60NIZU57hgmYfmzxF2+aFxskKilfD+dme7JwWoY+d2qJA5G/1wHxPJeq+M9wsSb/EbS+uQ+RjqKwLFOdFRAaENnYyc/odWaTcuP0bs/+PA739TYCUOLwo/iY4qQyd/voPj3cAPrpQh2GMljFePV9b0SStSxkZVnyMEMi+xKIu4GhxclyyBHYX7DMheGRSDyx06+CYz5/sPu9LXqgbdgYY/oUHfxC55/o7rCJX+wEaNOkyc6hlL+QQz1ZW6qztiyJqfKl8MmM9J5CZhxSXVXTigKwc2MQMdb1vnXcggpMAjuwY9vY7PNePp0SKanjg2W4gcTv/iwq4X8pD/p36cp1vY4OSZuc6zlOkY+jG+OavFR4r+fBYs0I0=
+  provider: npm
