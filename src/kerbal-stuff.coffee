@@ -26,10 +26,10 @@ module.exports = (robot) ->
           json = JSON.parse(body)
           if json.length >= maxresults
             for mod in [maxresults..0]
-              msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
+              msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].game_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
           else 
             for mod in json
-              msg.send "#{mod.name} by #{mod.author} ksp:#{mod.versions[0].ksp_version} -- url: https://spacedock.info/mod/#{mod.id}"
+              msg.send "#{mod.name} by #{mod.author} ksp:#{mod.versions[0].game_version} -- url: https://spacedock.info/mod/#{mod.id}"
         catch err
           msg.send err
 
@@ -39,7 +39,7 @@ module.exports = (robot) ->
         try
           json = JSON.parse(body)
           for mod in [maxresults..0]
-            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
+            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].game_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
         catch err
           msg.send err
 
@@ -49,7 +49,7 @@ module.exports = (robot) ->
         try
           json = JSON.parse(body)
           for mod in [maxresults..0]
-            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
+            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].game_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
         catch err
           msg.send err
 
@@ -59,6 +59,6 @@ module.exports = (robot) ->
         try
           json = JSON.parse(body)
           for mod in [maxresults..0]
-            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].ksp_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
+            msg.send "#{json[mod].name} by #{json[mod].author} -- ksp:#{json[mod].versions[0].game_version} -- url: https://spacedock.info/mod/#{json[mod].id}"
         catch err
           msg.send err
